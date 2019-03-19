@@ -1,0 +1,15 @@
+
+<div *ngIf="contact">
+
+    <div class="card border-primary mb-3">
+        <div class="card-header"><h4>{{contact.firstName}} {{contact.lastName}}</h4></div>
+        <div class="card-body">
+          <p class="card-text"> <span>Adresse: </span>{{contact.adress}}</p>
+          <p class="card-text"> <span>Email</span> {{contact.email}}</p>
+          <p class="card-text"> <span>Téléphone:</span> {{contact.phone}}</p>
+          <a href="contact/edit/{{contact.id}}">Editer</a>
+         </div>
+
+    </div>
+
+</div>

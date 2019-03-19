@@ -1,0 +1,41 @@
+
+
+<div class="container">
+    <h1 class="mt-6">Mes contacts</h1>
+  <div class="row content">
+      <div class="col-sm-3 ">
+        <app-contact-detail [contact]="selectedContact"></app-contact-detail>
+      </div>
+    
+      <div class="col-sm-9">
+          
+        <div class="row flex">
+            <div class="col-md-4 mt-4"
+            *ngFor="let contact of contacts; index as i;">
+                <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title"
+                      
+                      [class.selected]="contact === selectedContact">
+                          {{contact.firstName}} {{contact.lastName}}
+                      </h5>
+                      <p>{{contact.email}} </p>
+                      <p>{{contact.phone}} </p>
+                      
+                      <button
+                      class="btn btn-primary"
+                      (click)="onSelect(contact)">
+                      Détails</button>
+                      
+                      <span 
+                      (click)=onDelete(index)>Supprimer
+                    </span>
+                      
+                      
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+</div>
